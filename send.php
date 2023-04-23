@@ -67,7 +67,7 @@ if(isset($_POST["send"])){
             
             We have received your message and we are currently reviewing it. Our team will be in touch with you as soon as possible.<br><br>
             
-            In the meantime, please feel free to browse our website <a href="bldg126studio.rf.gd">Bldg Studio</a> for more information about our products and services.<br><br>
+            In the meantime, please feel free to browse our website <a href="https://bldg126studio.infuselibrary.tech">Bldg Studio</a> for more information about our products and services.<br><br>
             
             Thank you again for reaching out to us. We look forward to assisting you.<br><br>
             
