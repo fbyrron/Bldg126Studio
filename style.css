@@ -1,0 +1,57 @@
+.scrollable-row {
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .scrollable-row::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  
+  .scrollable-row img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .scrollable-row img:last-child {
+    margin-right: 0;
+  }
+  
+          img {
+              animation: fadeIn 1s;
+              animation-fill-mode: forwards;
+              opacity: 0;
+              }
+  
+          @keyframes fadeIn {
+              0% {
+                  opacity: 0;
+                  transform: translateY(50px);
+              }
+              100% {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+          @font-face {
+              font-family: 'Champagne & Limousines';
+              src: url('font/Champagne & Limousines Bold.ttf') format('truetype');
+          }
+  
+          html {
+              scroll-behavior: smooth;
+              font-family: 'Champagne & Limousines', sans-serif;
+  
+          }
+          .grandis{
+              background-color: #FFCF66
+          }
+  
+          .darkergrandis{
+              background-color: #895e00;
+          }
+
+
+          
