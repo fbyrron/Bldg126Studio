@@ -36,7 +36,7 @@ if(isset($_POST["send"])){
     "
     <script>
     alert('Email Sent Successfully');
-    document.location.href = index.html
+    document.location.href = 'index.html'
     </script>
     ";
 
