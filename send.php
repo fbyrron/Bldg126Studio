@@ -14,15 +14,15 @@ if(isset($_POST["send"])){
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     // $mail->Username = ($_POST["Email"]);
-    $mail->Username = 'sesame13579@gmail.com';
+    $mail->Username = 'fbyrron@gmail.com';
     $mail->Password = 'fheiucndptntxkhe';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('sesame13579@gmail.com', $_POST["Name"]);
+    $mail->setFrom('fbyrron@gmail.com', $_POST["Name"]);
     // $mail->setFrom('sesame13579@gmail.com', 'Bldg126 Studio');
 
-    $mail->addAddress('sesame13579@gmail.com');
+    $mail->addAddress('fbyrron@gmail.com');
     // $mail->addAddress($_POST["Email"]);
 
     $mail->isHTML(true);
@@ -49,12 +49,12 @@ if(isset($_POST["send"])){
         $autoRespond->SMTPAuth   = TRUE;
         $autoRespond->SMTPSecure = "tls";
         $autoRespond->Port       = 587;
-        $autoRespond->Username   = "sesame13579@gmail.com";
+        $autoRespond->Username   = "fbyrron19@gmail.com";
         $autoRespond->Password   = "fheiucndptntxkhe";
         $autoRespond->Host       = 'smtp.gmail.com';
      
         $autoRespond->isHTML(true);
-        $autoRespond->setFrom('sesame13579@gmail.com', 'Bldg126 Studio');
+        $autoRespond->setFrom('fbyrron19@gmail.com', 'Bldg126 Studio');
         $autoRespond->addAddress($_POST["Email"]);
         $autoRespond->Subject = "Thank you for contacting us!"; 
         $autoRespond_template =
