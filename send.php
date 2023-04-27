@@ -19,10 +19,10 @@ if(isset($_POST["send"])){
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('fbyrron@gmail.com', $_POST["Name"]);
+    $mail->setFrom('fbyrron19@gmail.com', $_POST["Name"]);
     // $mail->setFrom('sesame13579@gmail.com', 'Bldg126 Studio');
 
-    $mail->addAddress('fbyrron@gmail.com');
+    $mail->addAddress('fbyrron19@gmail.com');
     // $mail->addAddress($_POST["Email"]);
 
     $mail->isHTML(true);
