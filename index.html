@@ -21,7 +21,7 @@
         <div class="hidden lg:block">
             <label class="text-l pr-7 hover:underline hover:text-blue-500"><a href="#home">Home</a></label>
             <label class="text-l pr-7 hover:underline hover:text-blue-500"><a href="#services">Services</a></label>
-            <label class="text-l pr-7 hover:underline hover:text-blue-500"><a href="#pg">Photo Gallery</a></label>
+            <label class="text-l pr-7 hover:underline hover:text-blue-500"><a href="#portfolio">Portfolio</a></label>
             <label class="text-l pr-7 hover:underline hover:text-blue-500"><a href="#about us">About Us</a></label>
             <label class="text-l hover:underline hover:text-blue-500"><a href="#contact">Contact Us</a></label>
         </div>
@@ -37,7 +37,8 @@
 
 <!-- {{-- ---------BODY-------- --}} -->
 
-<body>
+<body>  
+    <!-- class="slider" -->
     <div>
         <div class="relative flex " id="home">
             <div class="hidden lg:block w-1/3" >
@@ -46,16 +47,17 @@
             <img src="images/image-removebg-preview (1).png" alt="logo" width="300" >
             </div>
         </div>
-            <div class="h-screen w-2/3 flex flex-col justify-center items-center">
+            <div class="lg:h-screen w-2/3 flex flex-col justify-center items-center">
                 <div><iframe width="600" height="315" src="https://www.youtube.com/embed/53UDg9pHoQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
             
         </div>
-        <!-- {{-- RATES & PACKAGES SECTION --}} -->
+        <!-- {{-- SERVICES SECTION --}} -->
         <div class="bg-gray-100" style=" height: 90px " id="services">
         </div>
         <div class="pt-10 px-5 bg-gray-100 lg:px-20 ">
-            <H1 class="text-center text-2xl font-bold lg:text-4xl">Services</H1>
+                <H1 class="text-center text-2xl font-black lg:text-4xl">Services</H1>
+
             <div class="flex flex-col lg:flex-row">
                 <div class="flex flex-col w-1/2 m-10 pr-10">
                     <img src="images/dnb.png" width="300" class="pb-5">
@@ -81,14 +83,67 @@
 
         </div>
         
-        <!-- {{-- PHOTO GALLERY SECTION --}} -->
-        <div style=" height: 90px " id="pg"></div>
+        <!-- {{-- PORTFOLIO SECTION --}} -->
+        <div style="height:90px " id="portfolio"></div>
         <div class="pt-10 bg-gray-200">
-            <H1 class="text-center text-2xl pb-10 font-bold lg:text-3xl">Photo Gallery</H1>
+            <H1 class="text-center text-2xl pb-10 font-black lg:text-4xl">Our Portfolio</H1>
+
+            <H1 class="text-center text-2xl pb-3 lg:text-2xl">Some of our works... </H1>
+            <p class="text-center text-2xl pb-10 lg:text-xl">Design & Branding &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  Digital Campaigns  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  Photo & Video Production  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  Event Organizing</p>
+            
+            <div class="grid grid-cols-2 px-20 md:grid-cols-4 gap-4">
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port2.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port9.png" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port6.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port4.png" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port7.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port8.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port12.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port5.png" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port10.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port11.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" style="border: 2px solid #895e00;" src="images/portfolio/port3.png" alt="">
+                    </div>
+                </div>
+            </div><br><br><br><hr style="border: 2px solid rgb(103, 103, 103); border-radius: 5px; margin: 50px; margin-left: 80px; margin-right: 80px;">
+
+            <H1 class="text-center text-2xl pb-10 lg:text-2xl">Companies we have worked with</H1>
+
             <div class="mt-10 flex justify-center" >
                 <button class="grandis rounded-2xl py-3 px-10 text-black font-bold" >View More</button></div>
-                <div class="bg-gray-200" style=" height: 120px " id="about us"></div>
-        </div>
+            </div>
+            <div class="bg-gray-200" style=" height: 120px " id="about us"></div>
         </div>
 
         <!-- {{-- ABOUT US SECTION --}} -->
@@ -98,7 +153,7 @@
                     <img src="images/image-removebg-preview (2).png" width="300" >
                 </div>
                 <div class="w-1/2 flex flex-col items-center">
-                    <H1 class="text-center text-2xl font-bold lg:text-3xl py-10">About Us</H1>
+                    <H1 class="text-center text-2xl font-black lg:text-4xl py-10">About Us</H1>
                     <p class="text-xl p-20">A creatives company that produces visual work and graphic design for content creators. Provides digital marketing and strategic advertising for business related clients, as well as curate young artists towards reaching their objectives and aspirations as online influencers.</p>
                     <img src="images/build.png" alt="build" width="400">
                 </div>
@@ -112,11 +167,12 @@
                     <h2 class="text-2xl m-5">Fueled by passion and a commitment to our clients, our team of digital experts drives performance for small businesses and Fortune 500 companies alike.</h2>
                 </div>
                 <div class="w-2/3 flex flex-col">
-                    <div class="flex flex-row ">
-                        <img src="images/bts1.png" >
-                        <img src="images/bts2.png" >
-                        <img src="images/bts3.png" >
-                    </div>
+                    <div class="flex flex-row justify-between">
+                        <img src="images/bts1.png">
+                        <img src="images/bts2.png">
+                        <img src="images/bts3.png">
+                      </div>
+                      
                     <!-- <div class="flex flex-row ">
                         <img src="images/bts4.png" >
                         <img src="images/bts5.png" >
@@ -130,15 +186,16 @@
         <!-- {{-- CONTACT US SECTION --}} -->
         <div class="bg-gray-200" style=" height: 90px " id="contact"></div>
         <div class="py-10 px-5 bg-gray-200 ">
-            <p class="text-center font-bold text-2xl lg:text-3xl"><b>Contact Us</b></p>
-            <div class="flex flex-col md:flex-row">
+            <p class="text-center font-black text-2xl lg:text-4xl"><b>Contact Us</b></p>
+            <div class="flex flex-col md:flex-row justify-center">
                 <div class="lg:w-1/2">
+                    
                     <div class="bg-white m-10  p-10 rounded-2xl shadow-lg ">    
                         <div class="flex flex-col justify-evenly lg:flex-row ">
                             <div class="flex flex-col items-center p-10">
                                 <i class="fas fa-phone fa-4x pb-5" style="color: #895e00;"></i>
                                 <h3><b>Call Us</b></h3>
-                                <p>0932-206-3233</p>
+                                <p>(+63) 932-206-3233</p>
                             </div>
                             <div class="flex flex-col items-center p-10">
                                 <i class="fas fa-envelope fa-4x pb-5" style="color: #895e00;"></i>
@@ -147,10 +204,14 @@
                             </div>
                         </div> 
                     </div>
-                    <div class="bg-white m-10 p-10 rounded-2xl shadow-lg">
+                    
+                    <div class="bg-white m-10 p-20 rounded-2xl shadow-lg">
                         <h1 class="font-bold text-2xl text-center pb-10">Social Media Accounts</h1>
+                        <div class="flex justify-evenly">
+
+                        <div class=" flex flex-row">
                         <div class=" flex flex-col items-center">
-                            <div class="flex flex-row p-5">
+                            <div class="flex flex-row pb-5">
                                 <a href="facebook.com/Bldg126Studio"><img src="images/gallery18.png" alt="fb" width="30"></a>
                                 <p class="pl-5 ">Bldg126 Studio</p>
                             </div>  
@@ -159,6 +220,10 @@
                                 <a href="instagram.com/Bldg126.Studio"><img src="images/ig.png" alt="ig" width="30"></a>
                                 <p class="pl-5 ">Bldg126.studio</p>
                             </div>  
+                        </div></div>
+
+                        <div class=" flex flex-row">
+                            <div class=" flex flex-col items-center">
                             <div class="flex flex-row pb-5">
                                 <a href="bit.ly/3cbzkXF"><img src="images/yt.png" alt="yt" width="30"></a>
                                 <p class="pl-5 ">Bldg126 Studio</p>
@@ -167,14 +232,15 @@
                                 <a href=""><img src="images/tiktok.png" alt="tiktok" width="30"></a>
                                 <p class="pl-5 ">bldg126studio</p>
                             </div>  
-                        </div>
+                        </div></div>
+                    </div>  
                     </div>
                 </div>
             
 
-            <div class="bg-white m-10 lg:w-2/4 p-10 rounded-2xl shadow-lg ">
+            <div class="bg-white m-10 lg:w-1/3 p-10 rounded-2xl shadow-lg ">
                 <div>
-                    <div class="pb-10 text-center item-center">
+                    <div class="text-center item-center">
                     <form action="send.php" method="post">
                         <label>Name</label><br>
                         <input type="text" name="Name" placeholder="Full Name" size="40" class = "bg-gray-200 p-4 my-2 rounded-xl" required><br><br>
@@ -183,21 +249,19 @@
                         <input type="text" name="Email" placeholder="Email" size="40" class = "bg-gray-200 p-4 my-2 rounded-xl" required><br><br>
 
                         <label> Concern </label><br>
-                        <select name="Concern" id="Concern" class = "bg-gray-200 p-4 my-2 rounded-xl" required>
+                        <select name="Concern" id="Concern" class = "bg-gray-200 p-4 my-2 rounded-xl" style="width: 300px;" required>
                             <option value="Feedback">Feedback</option>
-                            <option value="Inquiries">Inquiries</option>
+                            <option value="Inquiries">Inquiry</option>
                             <option value="Appointment">Appointment</option>
                             <option value="Others">Other concern</option>
 
                         </select><br><br>
 
                         <label>Message</label><br>
-                        <textarea type="text" name="Message" placeholder="Enter your Message here." size="50" class = "bg-gray-200 p-4 my-2 rounded-xl" required></textarea><br><br>
+                        <textarea type="text" name="Message" placeholder="Enter your Message here." style="width: 300px;" class = "bg-gray-200 p-4 my-2 rounded-xl" required></textarea><br><br>
 
-                        <button type="submit" name="send" class=" darkergrandis rounded-2xl py-3 px-10 font-bold text-white">Send</button><br><br>
+                        <button type="submit" name="send" class=" darkergrandis rounded-2xl py-3 px-10 font-bold text-white" >Send</button>
                         
-                    <!-- <a href="feedback.php"> next page</a> -->
-
                     </form>
                 </div>
                 </div>
@@ -210,7 +274,8 @@
 
 <footer class="text-center inset-x-0 bottom-0">
     <div class="p-5 bg-red bg-opacity-50 ">
-        <p>© 2023 Bldg126 Studio | All Rights Reserved</p>
+        <p>© 2023 <b class="font-bold">Bldg126 Studio</b> | All Rights Reserved</p>
     </div>
 </footer>
+
 </html>

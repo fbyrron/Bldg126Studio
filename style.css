@@ -1,57 +1,83 @@
-.scrollable-row {
+.slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+  
+  .slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .slider img.active {
+    opacity: 1;
+  }
+  
+@font-face {
+    font-family: 'Champagne & Limousines';
+    src: url('font/Champagne & Limousines Bold.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Champagne & Limousines', sans-serif;
+
+}
+.grandis{
+    background-color: #FFCF66
+}
+
+.darkergrandis{
+    background-color: #895e00;
+}
+
+#footer{
+    text-align: center;
+}
+
+.image-container {
     display: flex;
-    overflow-x: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
-  .scrollable-row::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
+  .image-container img {
+    flex-basis: calc(33.33% - 10px);
+    margin: 5px;
+    object-fit: cover;
+    height: 200px;
+  }
+  .masonry-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    margin: 0;
+    padding: 0;
   }
   
-  .scrollable-row img {
-    width: 200px;
+  .masonry-item {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .masonry-item img {
+    width: 100%;
     height: auto;
-    margin-right: 20px;
+    display: block;
   }
   
-  .scrollable-row img:last-child {
-    margin-right: 0;
+  .border {
+    border: 2px solid black;
   }
   
-          img {
-              animation: fadeIn 1s;
-              animation-fill-mode: forwards;
-              opacity: 0;
-              }
+  .gradient{
+    height: 200px;
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(31, 31, 31));
+  }
   
-          @keyframes fadeIn {
-              0% {
-                  opacity: 0;
-                  transform: translateY(50px);
-              }
-              100% {
-                  opacity: 1;
-                  transform: translateY(0);
-              }
-          }
-          @font-face {
-              font-family: 'Champagne & Limousines';
-              src: url('font/Champagne & Limousines Bold.ttf') format('truetype');
-          }
   
-          html {
-              scroll-behavior: smooth;
-              font-family: 'Champagne & Limousines', sans-serif;
   
-          }
-          .grandis{
-              background-color: #FFCF66
-          }
-  
-          .darkergrandis{
-              background-color: #895e00;
-          }
-
-
-          
