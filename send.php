@@ -69,7 +69,7 @@ if(isset($_POST["send"])){
             
             In the meantime, please feel free to browse our website <a href="https://bldg126studio.infuselibrary.tech">Bldg Studio</a> for more information about our products and services.<br><br>
             
-            Thank you again for reaching out to us. We look forward to assisting you.<br><br>
+            Thank you again for reaching out to us. We look forward in assisting you.<br><br>
             
             Best regards,<br>
             <b>Bldg126 Studio</b>';
