@@ -10,6 +10,48 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="images/bldg grandis.png">
     <title>Bldg126 Studio</title>
+    <style>
+        
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-menu ul li {
+    margin-bottom: 1rem;
+}
+
+.overlay-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+    </style>
 </head>
 
 
@@ -25,14 +67,45 @@
             <label class="text-l pr-7 hover:underline hover:text-blue-500"><a href="#about us">About Us</a></label>
             <label class="text-l hover:underline hover:text-blue-500"><a href="#contact">Contact Us</a></label>
         </div>
-        <button class="lg:hidden" style="margin-left: auto;">
+        <button id="menuButton" class="lg:hidden" style="margin-left: auto;">
             <svg class="w-6 h-6" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
             </svg>
         </button>
-
+        
+        
     </div>
     <div class="grandis h-1 lg:h-2"></div>
+    
+    <div id="overlayMenu" class="overlay-menu">
+        <span class="close-button">&times;</span>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about us">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <script>
+    document.getElementById('menuButton').addEventListener('click', function() {
+        var overlayMenu = document.getElementById('overlayMenu');
+        overlayMenu.style.display = 'block';
+    });
+    
+    document.querySelector('.close-button').addEventListener('click', function() {
+        var overlayMenu = document.getElementById('overlayMenu');
+        overlayMenu.style.display = 'none';
+    });
+    
+    document.querySelectorAll('#overlayMenu ul li a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var overlayMenu = document.getElementById('overlayMenu');
+            overlayMenu.style.display = 'none';
+        });
+    });
+    </script>
 </header>
 
 <!-- {{-- ---------BODY-------- --}} -->
@@ -49,18 +122,18 @@
             </div>
             <div id="largeScreenDiv" class="lg:h-screen w-2/3" style="padding-top: 230px;">
                 <div class="flex justify-center">
-                  <iframe width="600" height="337" src="https://www.youtube.com/embed/53UDg9pHoQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="600" height="337" src="https://www.youtube.com/embed/53UDg9pHoQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+            </div>
+            
+            <div id="smallScreenDiv" class="w-full">
+              <div class="bg-gray-100" style=" height: 120px " id="home">
               </div>
-              
-              
-              <div id="smallScreenDiv" class="w-full">
-                <div class="bg-gray-100" style=" height: 120px " id="home">
-                </div>
-                <div>
-                  <iframe width="100%" height="200px" src="https://www.youtube.com/embed/53UDg9pHoQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+              <div>
+                <iframe width="100%" height="200px" src="https://www.youtube.com/embed/53UDg9pHoQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
+            </div>
+              
 
               
               <script>
@@ -382,20 +455,38 @@
             <div class="bg-white m-5 lg:m-10 lg:w-1/3 p-5 lg:p-10 rounded-2xl shadow-lg">
                 <div>
                     <div class="text-center item-center">
-                        <form action="send.php" method="post">
+                        <form action="send.php" method="post" onsubmit="return validateForm()">
                             <label>Name</label><br>
-                            <input type="text" name="Name" placeholder="Full Name" class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" required><br><br>
+                            <input type="text" name="Name" placeholder="Full Name" class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" oninput="capitalizeFirstLetter(this)" required><br><br>
             
                             <label>Email</label><br>
-                            <input type="text" name="Email" placeholder="Email" class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" required><br><br>
+                            <input type="text" name="Email" placeholder="Email" class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" oninput="validateEmail(this)" required><br><br>
             
                             <label>Concern</label><br>
-                            <select name="Concern" id="Concern" class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" required>
+                            <select name="Concern" id="Concern" class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" required onchange="validateConcern(this)">
+                                <option value="" selected disabled hidden>Choose One</option>
                                 <option value="Feedback">Feedback</option>
                                 <option value="Inquiries">Inquiry</option>
                                 <option value="Appointment">Appointment</option>
                                 <option value="Others">Other concern</option>
-                            </select><br><br>
+                              </select>
+                              <p id="concernError" class="text-red-500"></p>
+                              
+                              <script>
+                              function validateConcern(select) {
+                                var selectedValue = select.value;
+                                var concernError = document.getElementById('concernError');
+                              
+                                if (selectedValue === '') {
+                                  select.classList.add('border-red-500');
+                                  concernError.textContent = 'Please choose one.';
+                                } else {
+                                  select.classList.remove('border-red-500');
+                                  concernError.textContent = '';
+                                }
+                              }
+                              </script>
+                              
             
                             <label>Message</label><br>
                             <textarea type="text" name="Message" placeholder="Enter your Message here." class="bg-gray-200 p-2 lg:p-4 my-2 rounded-xl w-full" required></textarea><br><br>
@@ -405,7 +496,40 @@
                     </div>
                 </div>
             </div>
-            
+            <script>
+                function validateForm() {
+            var isValid = true;
+            var inputs = document.getElementsByTagName('input');
+            var errorMessage = '';
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].style.borderColor === 'red') {
+                    isValid = false;
+                    errorMessage = 'Please fill in all fields correctly.';
+                    break;
+                }
+            }
+
+            var errorElement = document.getElementById('formError');
+            errorElement.textContent = errorMessage;
+
+            return isValid;
+        }
+        function capitalizeFirstLetter(input) {
+            var value = input.value;
+            input.value = value.replace(/(^|\s)\S/g, function(match) {
+                return match.toUpperCase();
+            });
+            isValid = input.value.trim().length > 0;
+            input.style.borderColor = isValid ? 'green' : 'red';
+        }
+        function validateEmail(input) {
+    var value = input.value;
+    var isValid = value.includes('@') && value.endsWith('.com');
+    input.style.borderColor = isValid ? 'green' : 'red !important';
+}
+ 
+            </script>
             
             
         </div>

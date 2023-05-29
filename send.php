@@ -32,15 +32,15 @@ if(isset($_POST["send"])){
 
     // $mail->send();
 
-    echo
-    "
-    <script>
-    alert('Email Sent Successfully');
-    document.location.href = 'index.html'
-    </script>
-    ";
-
+    
     if($mail->Send()) {
+        echo
+        "
+        <script>
+        alert('Email Sent Successfully');
+        document.location.href = 'index.html'
+        </script>
+        ";
         $autoRespond = new PHPMailer();
      
         $autoRespond->IsSMTP();
